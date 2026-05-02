@@ -15,7 +15,7 @@
 }
 
 .filter-icon {
-  color: var(--primary);
+  color: #6366f1;
 }
 
 .filter-text {
@@ -40,19 +40,38 @@
   }
 }
 
-/* MUI Menu customization for Dark Pastel */
-.MuiPaper-root {
-  background-color: #1a2233 !important;
-  color: var(--text-main) !important;
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+/**
+ * MUI MENU CUSTOMIZATION
+ * Optimized for Black, regular-weight text in the dropdown
+ */
+.MuiPaper-root.MuiMenu-paper {
+  background-color: #fefaf6 !important;
+  color: #000000 !important; /* Force black text */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08) !important;
+  border-radius: 12px !important;
+}
+
+.MuiMenuItem-root {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 400 !important; /* Removed bold */
+  font-size: 0.9rem !important;
+  color: #000000 !important; /* Force black text */
+  padding: 10px 16px !important;
+  transition: all 0.2s ease !important;
 }
 
 .MuiMenuItem-root:hover {
-  background-color: rgba(165, 180, 252, 0.1) !important;
+  background-color: #eef2ff !important;
+  color: #000000 !important;
 }
 
 .MuiMenuItem-root.Mui-selected {
-  background-color: var(--primary) !important;
-  color: #0f141f !important;
+  background-color: #e0e7ff !important;
+  color: #000000 !important;
+  font-weight: 400 !important; /* Ensure selected state is also not bold */
+}
+
+.MuiMenuItem-root.Mui-selected:hover {
+  background-color: #d1d5db !important;
 }

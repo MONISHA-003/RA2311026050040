@@ -12,19 +12,22 @@ const FilterBar = ({ currentFilter, onFilterChange }) => {
       </div>
       
       <FormControl variant="filled" size="small" className="filter-form-control">
-        <InputLabel id="type-filter-label" sx={{ color: 'var(--text-muted)' }}>Type</InputLabel>
+        <InputLabel id="type-filter-label" sx={{ color: currentFilter === 'All' ? 'white' : 'var(--text-muted)' }}>Type</InputLabel>
         <Select
           labelId="type-filter-label"
           id="type-filter"
           value={currentFilter}
           onChange={(e) => onFilterChange(e.target.value)}
           sx={{
-            color: 'var(--text-main)',
-            '.MuiSvgIcon-root': { color: 'var(--text-muted)' },
+            // Logic: White text if 'All', Black text after selection
+            color: currentFilter === 'All' ? 'white' : 'black',
+            '.MuiSvgIcon-root': { color: currentFilter === 'All' ? 'white' : 'var(--text-muted)' },
             '&:before': { borderBottomColor: 'var(--glass-border)' },
             '&:after': { borderBottomColor: 'var(--primary)' },
-            backgroundColor: 'rgba(255, 255, 255, 0.05)',
-            '&:hover': { backgroundColor: 'rgba(255, 255, 255, 0.1)' }
+            backgroundColor: currentFilter === 'All' ? 'rgba(0,0,0,0.2)' : 'rgba(255, 255, 255, 0.5)',
+            '&:hover': { backgroundColor: 'rgba(0,0,0,0.25)' },
+            fontWeight: '600',
+            borderRadius: '8px'
           }}
         >
           <MenuItem value="All">All Notifications</MenuItem>
