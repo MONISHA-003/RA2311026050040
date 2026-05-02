@@ -28,7 +28,6 @@
   min-width: 180px !important;
 }
 
-/* MOBILE ADAPTATIONS */
 @media (max-width: 600px) {
   .filter-bar-container {
     flex-direction: column;
@@ -41,19 +40,19 @@
   }
 }
 
-/* MUI Menu customization */
+/* MUI Menu customization for Dark Pastel */
 .MuiPaper-root {
-  background-color: var(--bg-main) !important;
+  background-color: #1a2233 !important;
   color: var(--text-main) !important;
   border: 1px solid var(--glass-border);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
-  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
 }
 
 .MuiMenuItem-root:hover {
-  background-color: rgba(129, 140, 248, 0.1) !important;
+  background-color: rgba(165, 180, 252, 0.1) !important;
 }
 
 .MuiMenuItem-root.Mui-selected {
   background-color: var(--primary) !important;
+  color: #0f141f !important;
 }

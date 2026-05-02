@@ -11,7 +11,6 @@
   margin: 1rem 2rem;
   padding: 0.75rem 2rem;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.8);
 }
 
 .nav-container {
@@ -56,12 +55,12 @@
 
 .nav-item:hover {
   color: var(--text-main);
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .nav-item.active {
   color: var(--primary);
-  background: rgba(129, 140, 248, 0.1);
+  background: rgba(165, 180, 252, 0.15);
 }
 
 .content {
@@ -76,7 +75,6 @@
   border-top: 1px solid var(--glass-border);
 }
 
-/* MOBILE NAV ADAPTATIONS */
 @media (max-width: 640px) {
   .navbar {
     margin: 1rem 0.5rem;
