@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap');
 
 :root {
-  /* Dark Pastel Palette */
-  --primary: #a5b4fc;         /* Muted Pastel Indigo */
-  --primary-hover: #818cf8;
-  --bg-main: #0f141f;         /* Deep Midnight Slate */
-  --bg-card: rgba(30, 39, 56, 0.7);
-  --text-main: #f1f5f9;       /* Crisp Off-White */
-  --text-muted: #94a3b8;      /* Muted Slate */
+  /* Creamy Soft Pastel Palette */
+  --primary: #c7d2fe;         /* Soft Lavender */
+  --primary-hover: #a5b4fc;
+  --bg-main: #fefaf6;         /* Creamy Off-White */
+  --bg-card: #ffffff;
+  --text-main: #334155;
+  --text-muted: #64748b;
   
-  /* Desaturated Pastel Category Accents */
-  --accent-placement: #86efac; /* Sage Mint */
-  --accent-result: #93c5fd;    /* Dusty Sky */
-  --accent-event: #fde047;     /* Soft Muted Gold */
+  /* Distinct Pastel Category Accents */
+  --accent-placement: #4ade80; /* Soft Emerald */
+  --accent-result: #60a5fa;    /* Soft Blue */
+  --accent-event: #fbbf24;     /* Soft Amber */
   
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --glass-border: rgba(0, 0, 0, 0.04);
+  --glass-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  --transition: all 0.3s ease;
 }
 
 * {
@@ -30,34 +30,26 @@ body {
   background-color: var(--bg-main);
   color: var(--text-main);
   line-height: 1.5;
-  overflow-x: hidden;
-  /* Dark subtle gradient */
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(165, 180, 252, 0.05) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(134, 239, 172, 0.03) 0px, transparent 50%);
   min-height: 100vh;
 }
 
 h1, h2, h3 {
   font-family: 'Outfit', sans-serif;
-  letter-spacing: -0.02em;
 }
 
 .glass-card {
   background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
-  border-radius: 20px;
+  border-radius: 18px;
   box-shadow: var(--glass-shadow);
 }
 
 .btn-primary {
   background: var(--primary);
-  color: #0f141f; /* Dark text for contrast on light pastel button */
+  color: #3730a3; /* Deep indigo text for readability */
   border: none;
   padding: 10px 24px;
-  border-radius: 14px;
+  border-radius: 12px;
   font-weight: 700;
   cursor: pointer;
   transition: var(--transition);
@@ -66,20 +58,14 @@ h1, h2, h3 {
 .btn-primary:hover {
   background: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(165, 180, 252, 0.4);
+  box-shadow: 0 5px 15px rgba(199, 210, 254, 0.5);
 }
 
-/* Custom MUI Overrides for Dark Pastel theme */
 .MuiPagination-root .MuiPaginationItem-root {
   color: var(--text-muted) !important;
-  border-color: var(--glass-border) !important;
 }
 
 .MuiPagination-root .MuiPaginationItem-root.Mui-selected {
   background-color: var(--primary) !important;
-  color: #0f141f !important;
-}
-
-.MuiPagination-root .MuiPaginationItem-root:hover {
-  background-color: rgba(165, 180, 252, 0.1) !important;
+  color: #3730a3 !important;
 }
