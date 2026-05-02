@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap');
+
+:root {
+  /* Pastel Palette */
+  --primary: #818cf8;         /* Pastel Indigo */
+  --primary-hover: #6366f1;
+  --bg-main: #f8fafc;         /* Soft Cloud White */
+  --bg-card: rgba(255, 255, 255, 0.8);
+  --text-main: #1e293b;       /* Dark Slate for contrast */
+  --text-muted: #64748b;
+  
+  /* Pastel Category Accents */
+  --accent-placement: #4ade80; /* Soft Emerald */
+  --accent-result: #60a5fa;    /* Soft Blue */
+  --accent-event: #fbbf24;     /* Soft Amber */
+  
+  --glass-border: rgba(0, 0, 0, 0.05);
+  --glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.5;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(129, 140, 248, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(74, 222, 128, 0.1) 0px, transparent 50%);
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: var(--glass-shadow);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(129, 140, 248, 0.3);
+}
+
+/* Custom MUI Overrides for Pastel theme */
+.MuiPagination-root .MuiPaginationItem-root {
+  color: var(--text-muted) !important;
+}
+
+.MuiPagination-root .MuiPaginationItem-root.Mui-selected {
+  background-color: var(--primary) !important;
+  color: white !important;
+}
